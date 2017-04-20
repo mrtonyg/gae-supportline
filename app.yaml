@@ -1,0 +1,21 @@
+application: gae-supportline
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+env_variables:
+  kayako_key: "d42fba7a-1a36-d974-8564-eba4895f7a70"
+  kayako_secret: "ZjNkODk4NGYtYzFhMi01NjY0LTA1NTItZGJmOTYyMDVlODFkMGJjOTAwMDktOGM4NC04YTg0LWVkMzQtN2NlOGEzY2JjM2U3"
